@@ -93,7 +93,7 @@ p {
 .button:hover::after {
   content: url(../svg/arrow.svg);
   position: relative;
-  top: 7px;
+  top: 3px;
   right: -45px;
 }
 
