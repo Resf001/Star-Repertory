@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #FFF;
+  font-family: "Roboto Flex";
+  font-variation-settings: "GRAD" 67, "slnt" 0, "XTRA" 511, "XOPQ" 113, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  font-weight: 685;
+  font-size: 48px;
+}
+
+h2 {
+  color: #FFF;
+  font-family: "Roboto Flex";
+  font-variation-settings: "GRAD" 67, "slnt" 0, "XTRA" 592, "XOPQ" 113, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  font-weight: 545;
+  font-size: 24px;
+}
+
+p {
+  color: #FFF;
+  font-family: "Roboto Flex";
+  font-variation-settings: "GRAD" 22, "slnt" 0, "XTRA" 502, "XOPQ" 121, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.button {
+  color: #FFF;
+  font-family: "Roboto Flex";
+  font-variation-settings: "GRAD" 67, "slnt" 0, "XTRA" 592, "XOPQ" 113, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  padding: 11px 36px 11px 7px;
+  border-radius: 20px;
+  box-shadow: -5px -5px #fff;
+  transition: 0.2s;
+  margin-right: 50px;
+}
+.button.primary {
+  background: #ED8423;
+}
+.button.secondary {
+  background: #151414;
+}
+.button:hover {
+  padding: 11px 60px 11px 7px;
+}
+.button:hover::after {
+  content: url(../svg/arrow.svg);
+  position: relative;
+  top: 7px;
+  right: -45px;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  background: #ED8423;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: 0.2s;
+}
+.card .card__img {
+  background: #000;
+  height: 170px;
+}
+.card .card__img::after {
+  position: relative;
+  content: url(../svg/imag.svg);
+  top: 69px;
+  left: 109px;
+}
+.card .card__infos h2 {
+  padding: 5px 0 0 15px;
+}
+.card .card__infos .card__tags {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 0 15px;
+}
+.card .card__infos .card__tags .card__tag {
+  background-color: #000;
+  padding: 2px 10px;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+body {
+  background-color: #393636;
+}
+
+.container__element {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 10% 0 10%;
+  gap: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */

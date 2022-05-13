@@ -4,7 +4,6 @@ $router = new AltoRouter();
 require "../config/maps.php";
 
 $match = $router->match();
-dump($match);
 
 if(is_array($match)){
     if (is_callable($match['target'])){

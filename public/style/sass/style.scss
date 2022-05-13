@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+@import 'libs/variable.scss';
+@import 'libs/reste.scss';
+@import 'libs/element.scss';
+
+body{
+    background-color: $background;
+}
+
+.container__element{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 10% 0 10%;
+    gap: 50px;
+}
