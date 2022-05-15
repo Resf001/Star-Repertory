@@ -30,11 +30,12 @@ p {
     color: #FFF;
     font-family: "Roboto Flex";
     font-variation-settings: $little__title;
+    font-size: 24px;
     padding: 11px 36px 11px 7px;
     border-radius: 20px;
     box-shadow: -5px -5px #fff;
     transition: .2s;
-    margin-right: 50px;
+    margin-right: 25px;
 
     &.primary{
         background: $primary;
@@ -51,7 +52,7 @@ p {
     &:hover::after{
         content: url(../svg/arrow.svg);
         position: relative;
-        top: 3px;
+        top: 1px;
         right: -45px;
     }
 }
@@ -72,7 +73,7 @@ p {
             position: relative;
             content: url(../svg/imag.svg);
             top: 69px;
-            left: 109px;
+            left: 43.6%;
         }
 
     }
@@ -99,6 +100,58 @@ p {
 
     &:hover{
         transform: scale(1.1);
+    }
+
+}
+
+.search__bar{
+    width: 400px;
+    height: 50px;
+    margin-right: 0px;
+    background: #FFF;
+    border-radius: 50px;
+
+    &.tiny{
+        width: 200px;
+
+        & .search_input{
+            width: 150px;
+        }
+    }
+
+    & .search_input{
+        padding-left: 15px;
+        height: 50px;
+        width: 350px;
+        border-width: 0px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-variation-settings: $little__title;
+
+        &::placeholder{
+            color: #000;
+            font-size: 3rem;
+            font-feature-settings: inherit;
+        }
+
+        &:focus-visible{
+            outline: 0px;
+        }
+
+    }
+
+    & .search__button{
+        background: #FFF;
+        border-width: 0px;
+        position: relative;
+        top: 8px;
+        left: -4px;
+
+        &::after{
+            content: url(../svg/glass.svg);
+            cursor: pointer;
+        }
+
     }
 
 }

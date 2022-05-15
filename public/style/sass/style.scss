@@ -2,6 +2,7 @@
 @import 'libs/variable.scss';
 @import 'libs/reste.scss';
 @import 'libs/element.scss';
+@import 'libs/home.scss';
 
 body{
     background-color: $background;
@@ -13,4 +14,9 @@ body{
     width: 80%;
     margin: 0 10% 0 10%;
     gap: 50px;
+}
+
+.button__container{
+    display: flex;
+    gap: 0 30px;
 }

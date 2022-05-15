@@ -7,9 +7,17 @@ $pageDescrition = "All of elements";
     <h2>Little Title</h2>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo molestiae non, rem cum soluta repellat cupiditate fugit ratione voluptate et quia architecto animi, tempore dolores sed quae quo natus in.</p>
     <h1>Button</h1>
-    <div>
+    <div class="button__container">
         <a href="/" class="button primary">Primary</a>
         <a href="" class="button secondary">Secondary</a>
+        <form action="" method="get" class="search__bar">
+            <input type="text" name="search" class="search_input" placeholder="...">
+            <button class="search__button"></button>
+        </form>
+        <form action="" method="get" class="search__bar tiny">
+            <input type="text" name="search" class="search_input" placeholder="...">
+            <button class="search__button"></button>
+        </form>
     </div>
     <h1>Card</h1>
     <div class="card">

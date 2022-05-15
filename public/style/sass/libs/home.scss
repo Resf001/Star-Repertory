@@ -1,0 +1,178 @@
+.header__home{
+    background-color: #000;
+    height: 500px;
+
+    & .topics{
+        padding-top: 5%;
+        padding-left: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        & h2{
+            color: $primary;
+        }
+
+    }
+
+    & .double__button{
+        padding-top: 75px;
+    }
+
+    & .marth {
+        display: none;
+    }
+
+    & .stars{
+        display: none;
+    }
+}
+
+.part__01 {
+
+    margin: 15px auto;
+
+    & .card__container{
+        margin-top: 25px;
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .header__home{
+        display: flex;
+        flex-direction: row;
+        height: 800px;
+        gap: 100px;
+    
+        & .topics {
+            display: flex;
+            flex-shrink: 0;
+            padding-top: 195px;
+        }
+
+        & .marth {
+            flex-shrink: 0;
+            display: inline-block;
+            margin-top: 150px;
+            width: 500px;
+            height: 500px;
+            background: $primary;
+            border-radius: 50%;
+        
+            & .stain__container{
+
+                margin-top: 125px;
+                margin-left: 75px;
+                width: 320px;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-column-gap: 10px;
+                grid-row-gap: 15px;
+
+                & .stain {
+                    height: 35px;
+                    border-radius: 45px;
+                    background: #AF7F37;
+
+                    &.stain__01{
+                        grid-area: 1 / 2 / 2 / 4;
+                    }
+        
+                    &.stain__02{
+                        grid-area: 2 / 1 / 3 / 4;
+                        background: #825513;
+                    }
+        
+                    &.stain__03{
+                        grid-area: 2 / 4 / 3 / 7;
+                        background: #D49E4B;
+                    }
+        
+                    &.stain__04{
+                        grid-area: 3 / 2 / 4 / 5;
+                        background: #E7AF5C;
+                    }
+        
+                    &.stain__05{
+                        grid-area: 3 / 5 / 4 / 6;
+                        background: #8D6323;
+                    }
+        
+                    &.stain__06{
+                        grid-area: 4 / 3 / 5 / 5;
+                    }
+                }
+
+            }
+        }
+
+        & .stars{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 250px;
+            height: 500px;
+            margin-top: 125px;
+
+            & .star {
+
+                &.star__01{
+                    grid-area: 1 / 7;
+                }
+    
+                &.star__02{
+                    grid-area: 2 / 2;
+                    transform: scale(1.5) rotate(120deg);
+                }
+    
+                &.star__03{
+                    grid-area: 3 / 5;
+                    transform: scale(1.2);
+                }
+    
+                &.star__04{
+                    grid-area: 3 / 1;
+                    transform: scale(0.8) rotate(12deg);
+                }
+    
+                &.star__05{
+                    grid-area: 5 / 2;
+                    transform: scale(1.4);
+                }
+    
+                &.star__06{
+                    grid-area: 4 / 8;
+                    transform: rotate(75deg);
+                }
+    
+                &.star__07{
+                    grid-area: 7 / 4;
+                    transform: scale(2) rotate(15deg);
+                }
+    
+                &.star__08{
+                    grid-area: 8 / 8;
+                    transform: rotate(60deg);
+                }
+            }
+        }
+    }
+
+    .part__01{
+        margin-top: 50px;
+        margin-left: 45px;
+
+        & .card__container{
+            flex-direction: row;
+        }
+    }
+
+}
+
+
