@@ -11,7 +11,7 @@ $pageDescrition = "Description";
                 <button class="search__button"></button>
         </form>
         <div class="double__button">
-            <a href="/" class="button primary">Sign In</a>
+            <a href="<?= $router->generate("sign") ?>" class="button primary">Sign In</a>
             <a href="" class="button secondary">Log Out</a>
         </div>
     </div>

@@ -81,6 +81,8 @@ p {
   box-shadow: -5px -5px #fff;
   transition: 0.2s;
   margin-right: 25px;
+  border: 0px;
+  cursor: pointer;
 }
 .button.primary {
   background: #ED8423;
@@ -314,6 +316,55 @@ p {
     flex-direction: row;
   }
 }
+.sign {
+  background: #FFF;
+  height: 100%;
+  text-align: center;
+}
+.sign h1 {
+  color: #000;
+}
+.sign .sign__form {
+  margin-top: 25px;
+}
+.sign .sign__form .sign__element label {
+  text-align: left;
+  margin-left: 50px;
+  display: block;
+  font-family: "Roboto Flex";
+  font-variation-settings: "GRAD" 22, "slnt" 0, "XTRA" 502, "XOPQ" 121, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  font-size: 20px;
+}
+.sign .sign__form .sign__element input {
+  border: 1px solid #000;
+  width: 170px;
+  height: 25px;
+  border-radius: 25px;
+  margin: 25px;
+}
+.sign .sign__form .sign__element .F {
+  margin: 0;
+  width: 55px;
+}
+.sign .sign__form .sign__element .F::before {
+  content: "F";
+  font-variation-settings: "GRAD" 22, "slnt" 0, "XTRA" 502, "XOPQ" 121, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  font-size: 20px;
+}
+.sign .sign__form .sign__element .M {
+  margin: 0;
+  width: 55px;
+}
+.sign .sign__form .sign__element .M::before {
+  content: "M";
+  font-variation-settings: "GRAD" 22, "slnt" 0, "XTRA" 502, "XOPQ" 121, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  font-size: 20px;
+}
+.sign .sign__form .button {
+  margin-top: 25px;
+  margin-bottom: 100%;
+}
+
 body {
   background-color: #393636;
 }

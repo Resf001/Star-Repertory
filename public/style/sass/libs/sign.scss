@@ -1,0 +1,65 @@
+.sign{
+    background: #FFF;
+    height: 100%;
+    text-align: center;
+
+    h1{
+        color: #000;
+    }
+
+    .sign__form{
+
+        margin-top: 25px;
+
+        .sign__element{
+
+            label {
+                text-align: left;
+                margin-left: 50px;
+                display: block;
+                font-family: 'Roboto Flex';
+                font-variation-settings: $text;
+                font-size: 20px;
+            }
+
+            input{
+                border: 1px solid #000;
+                width: 170px;
+                height: 25px;
+                border-radius: 25px;
+                margin: 25px;
+            }
+
+            .F{
+                margin: 0;
+                width: 55px;
+
+                &::before{
+                    content: "F";
+                    font-variation-settings: $text;
+                    font-size: 20px;
+                }
+
+            }
+
+            .M{
+                margin: 0;
+                width: 55px;                
+
+                &::before{
+                    content: "M";
+                    font-variation-settings: $text;
+                    font-size: 20px;
+                }
+            }            
+
+        }
+
+        .button{
+            margin-top: 25px;
+            margin-bottom: 100%;
+        }
+
+    }
+
+}
