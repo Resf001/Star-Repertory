@@ -2,6 +2,7 @@
     background: #FFF;
     height: 100%;
     text-align: center;
+    height: 100vh;
 
     h1{
         color: #000;
@@ -57,7 +58,78 @@
 
         .button{
             margin-top: 25px;
-            margin-bottom: 100%;
+        }
+
+    }
+
+}
+
+.tips{
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .sign {
+        width: 450px;
+        float: left;
+
+        h1{
+            padding-top: 50px;
+        }
+    
+        .sign__form {
+
+            & .button{
+                margin-bottom: 0;
+            }
+
+        }
+        
+    }
+
+    .tips {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: $background;
+
+        .tips__carousel{
+            display: inline-block;
+            margin-top: 260px;
+            margin-left: 320px;
+
+            h1{
+                margin-bottom: 50px;
+            }
+
+            .tip{
+                display: inline-block;
+                height: 300px;
+                width: 500px;
+                background-color: #FFF;
+
+                h2, p{
+                    color: #000;
+                    width: 50%;
+                    margin-left: 35px;
+                }
+
+                h2{
+                    margin-top: 35px;
+                }
+            }
+        
+            .tip__img{
+                width: 400px;
+                height: 200px;
+                margin-left: 160px;
+
+                img{
+                    border-radius: 25px;
+                }
+            }
+        
         }
 
     }

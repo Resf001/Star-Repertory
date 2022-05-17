@@ -33,7 +33,7 @@ if (!empty($_POST)){
         <div class="sign__element">
             <label for="sex">Sex</label>
             <input type="radio" name="sex" id="sex" class="F" value="F">
-            <input type="radio" name="sex" id="sex" class="M" value="M">
+            <input type="radio" name="sex" class="M" value="M">
         </div>
         <input type="submit" name="submit" value="done" class="button primary">
     </form>
@@ -42,5 +42,17 @@ if (!empty($_POST)){
         <p>Nice, you are register. Thanks !!</p>
     </div>
 <?php endif ?>
+</div>
+<div class="tips">
+    <div class="tips__carousel">
+        <h1>Tips</h1>
+        <div class="tip">
+            <h2>it is very easy to build a time machine</h2>
+            <p>Just look the sky during the night</p>
+            <div class="tip__img">
+                <img src="../img/stars.jpg" alt="">
+            </div>
+        </div>
+    </div>
 </div>
 

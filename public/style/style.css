@@ -320,6 +320,7 @@ p {
   background: #FFF;
   height: 100%;
   text-align: center;
+  height: 100vh;
 }
 .sign h1 {
   color: #000;
@@ -362,9 +363,61 @@ p {
 }
 .sign .sign__form .button {
   margin-top: 25px;
-  margin-bottom: 100%;
 }
 
+.tips {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .sign {
+    width: 450px;
+    float: left;
+  }
+  .sign h1 {
+    padding-top: 50px;
+  }
+  .sign .sign__form .button {
+    margin-bottom: 0;
+  }
+
+  .tips {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #393636;
+  }
+  .tips .tips__carousel {
+    display: inline-block;
+    margin-top: 260px;
+    margin-left: 320px;
+  }
+  .tips .tips__carousel h1 {
+    margin-bottom: 50px;
+  }
+  .tips .tips__carousel .tip {
+    display: inline-block;
+    height: 300px;
+    width: 500px;
+    background-color: #FFF;
+  }
+  .tips .tips__carousel .tip h2, .tips .tips__carousel .tip p {
+    color: #000;
+    width: 50%;
+    margin-left: 35px;
+  }
+  .tips .tips__carousel .tip h2 {
+    margin-top: 35px;
+  }
+  .tips .tips__carousel .tip__img {
+    width: 400px;
+    height: 200px;
+    margin-left: 160px;
+  }
+  .tips .tips__carousel .tip__img img {
+    border-radius: 25px;
+  }
+}
 body {
   background-color: #393636;
 }
