@@ -10,8 +10,3 @@ CREATE TABLE user (
 	signday DATETIME NOT NULL,
 	status TINYINT UNSIGNED NOT NULL
 ) ENGINE=INNODB;
-
--- insert admin account
-INSERT INTO Animal 
-VALUES (1, 'Adminstrator', 'Adminstrator', 'starsrepertory@gmail.com', 'M', '$2y$20$6TPAgUSXHaOPa0qhqlsAnuIueInG7domvxZALaIS1.kPdPwgtCsZi', "2006-02-22", "2022-05-21 10:49:00", "3");
-

@@ -30,4 +30,11 @@ $pageDescrition = "All of elements";
             </div>
         </div>
     </div> 
+    <h1>succes and error</h1>
+    <div class="errors">
+        <p>Error : Error exemple, my brain bug when i see you</p>
+    </div>
+    <div class="succes">
+        <p>Succes : Succes exemple, my life is a succes ? i don't know</p>
+    </div>
 </div>

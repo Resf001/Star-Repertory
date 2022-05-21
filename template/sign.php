@@ -5,12 +5,11 @@ use App\PDO\SignPDO;
 $pageTitle = "Sign in";
 $pageDescrition = "Description";
 $log = false;
-$error = null;
+$errors = null;
 $succes = false;
 if (!empty($_POST)){
     $signPut = new SignPDO($_POST, $pdo); 
     $errors = $signPut->verifyData();
-    dump($errors);
     if (!$errors) {
         try {
             $errors = $signPut->putPDO();
@@ -19,6 +18,7 @@ if (!empty($_POST)){
         }
         if(!$errors) {
             $succes = true;
+            unset($_POST);
         }
     }
 }
@@ -29,23 +29,23 @@ if (!empty($_POST)){
     <form action="" method="post" class="sign__form">
         <div class="sign__element">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="<?= $_POST ? $_POST['name'] : '' ?>">
         </div>
         <div class="sign__element">
             <label for="firstname">FirstName</label>
-            <input type="text" name="firstname" id="firstname">
+            <input type="text" name="firstname" id="firstname" value="<?=$_POST ? $_POST['firstname'] : '' ?>">
         </div>
         <div class="sign__element">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" value="<?=$_POST ? $_POST['email'] : '' ?>">
         </div>
         <div class="sign__element">
             <label for="password">PassWord</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" value="<?=$_POST ? $_POST['password'] : '' ?>">
         </div>
         <div class="sign__element">
             <label for="birthday">Birthday</label>
-            <input type="date" name="birthday" id="birthday">
+            <input type="date" name="birthday" id="birthday" value="<?=$_POST ? $_POST['birthday'] : '' ?>">
         </div>
         <div class="sign__element">
             <label for="sex">Sex</label>
@@ -66,8 +66,6 @@ if (!empty($_POST)){
         <p>Nice, you are register. Thanks !!</p>
     </div>
 <?php endif ?>
-
-
 </div>
 <div class="tips">
     <div class="tips__carousel">
@@ -81,4 +79,3 @@ if (!empty($_POST)){
         </div>
     </div>
 </div>
-

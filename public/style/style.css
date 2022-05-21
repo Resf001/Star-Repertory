@@ -176,6 +176,22 @@ p {
   cursor: pointer;
 }
 
+.errors {
+  background-color: #961f1f;
+  border-radius: 25px;
+  border: 3px solid #640808;
+  padding: 25px;
+  margin: 10px;
+}
+
+.succes {
+  background-color: #2cc518;
+  border-radius: 25px;
+  border: 3px solid #066817;
+  padding: 25px;
+  margin: 10px;
+}
+
 .header__home {
   background-color: #000;
   height: 500px;

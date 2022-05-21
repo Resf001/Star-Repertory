@@ -35,7 +35,7 @@ class SignPDO{
             "name" => $this->data['name'],
             "firstname" => $this->data['firstname'],
             "email" => $this->data['email'],
-            "sex" => $this->data['sex'],
+            "sex" => array_key_exists('sex',  $this->data) ? $this->data['sex'] : false,
             "password" => password_hash($this->data['password'], PASSWORD_DEFAULT, ['cost' => 12]),
             "birthday" => $this->data['birthday'],
             "signday" => $datetime->format("Y-m-d H:i:s")
