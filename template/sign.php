@@ -4,14 +4,27 @@ use App\PDO\SignPDO;
 
 $pageTitle = "Sign in";
 $pageDescrition = "Description";
-$sign = false;
+$log = false;
+$error = null;
+$succes = false;
 if (!empty($_POST)){
     $signPut = new SignPDO($_POST, $pdo); 
-    $erros = $signPut->putToPDO();
+    $errors = $signPut->verifyData();
+    dump($errors);
+    if (!$errors) {
+        try {
+            $errors = $signPut->putPDO();
+        } catch (PDOException $e){
+            $errors["PDO"] = $e;
+        }
+        if(!$errors) {
+            $succes = true;
+        }
+    }
 }
 ?>
 <div class="sign">
-<?php if ($sign == false): ?>
+<?php if (!$succes): ?>
     <h1>Sign-In</h1>
     <form action="" method="post" class="sign__form">
         <div class="sign__element">
@@ -41,7 +54,14 @@ if (!empty($_POST)){
         </div>
         <input type="submit" name="submit" value="done" class="button primary">
     </form>
-<?php elseif ($sign == true) :?>
+    <?php if ($errors): ?>
+        <div class="errors">
+        <?php foreach($errors as $key => $error): ?>
+            <p><?= $key ?> :  <?= $error ?></p>
+        <?php endforeach ?>
+        </div>
+    <?php endif ?>
+<?php elseif ($succes) :?>
     <div class="succes">
         <p>Nice, you are register. Thanks !!</p>
     </div>
