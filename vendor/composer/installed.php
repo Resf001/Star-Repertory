@@ -1,12 +1,12 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8c929ec6c85008d33b9dbf7f5a51aae20e1eb826',
-        'name' => 'noe/staterpack',
+        'reference' => '507aae75dc7c9d5d7ac3e6a29bf3ff17246b7364',
+        'name' => 'noe/starrepertory',
         'dev' => true,
     ),
     'versions' => array(
@@ -19,13 +19,13 @@
             'reference' => 'f6fede4f94ced7c22ba63a9b8af0bf2dc38e3cb2',
             'dev_requirement' => false,
         ),
-        'noe/staterpack' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+        'noe/starrepertory' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8c929ec6c85008d33b9dbf7f5a51aae20e1eb826',
+            'reference' => '507aae75dc7c9d5d7ac3e6a29bf3ff17246b7364',
             'dev_requirement' => false,
         ),
         'symfony/polyfill-mbstring' => array(

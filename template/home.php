@@ -1,6 +1,7 @@
 <?php 
 $pageTitle = "Home";
 $pageDescrition = "Description";
+var_dump($pdo->query("SELECT * FROM user")->fetch()); 
 ?>
 <header class="header__home">
     <div class="topics">
@@ -12,7 +13,7 @@ $pageDescrition = "Description";
         </form>
         <div class="double__button">
             <a href="<?= $router->generate("sign") ?>" class="button primary">Sign In</a>
-            <a href="" class="button secondary">Log Out</a>
+            <a href="" class="button secondary">Log In</a>
         </div>
     </div>
     <div class="stars">

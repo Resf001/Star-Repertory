@@ -1,9 +1,13 @@
 <?php 
+
+use App\PDO\SignPDO;
+
 $pageTitle = "Sign in";
 $pageDescrition = "Description";
 $sign = false;
 if (!empty($_POST)){
-    $sign = true;
+    $signPut = new SignPDO($_POST, $pdo); 
+    $erros = $signPut->putToPDO();
 }
 ?>
 <div class="sign">
@@ -42,6 +46,8 @@ if (!empty($_POST)){
         <p>Nice, you are register. Thanks !!</p>
     </div>
 <?php endif ?>
+
+
 </div>
 <div class="tips">
     <div class="tips__carousel">

@@ -2,6 +2,7 @@
 require "../vendor/autoload.php";
 $router = new AltoRouter();
 require "../config/maps.php";
+require "../elements/PDO.php";
 
 $match = $router->match();
 
