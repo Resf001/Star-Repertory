@@ -27,6 +27,18 @@ class VerifyPost {
         return $errors;
     }
 
+    public static function verifyLog(array $data, object $pdo)
+    {
+        $errors = [];
+        if (!$data['password']){
+            $errors['password'] = "Enter your password please";
+        }
+        if (!$data['email']){
+            $errors['email'] = "Enter your mail please";
+        }
+        return $errors;
+    }
+
     public static function verifySignDuble(string $email, object $pdo): array
     {
         $errors = [];
@@ -37,5 +49,17 @@ class VerifyPost {
             return $errors; 
         }
         return $errors;
+    }
+
+    public static function userExist(array $data, object $pdo)
+    {
+        $query = $pdo->prepare("SELECT id, password FROM user WHERE email = :email");
+        $query->execute(['email' => $data['email']]);
+        return $query->fetch();
+    }
+
+    public static function passwordVerify(string $passwordInput, string $passwordHash): bool
+    {
+        return password_verify($passwordInput, $passwordHash);
     }
 }
