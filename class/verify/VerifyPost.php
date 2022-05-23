@@ -53,7 +53,7 @@ class VerifyPost {
 
     public static function userExist(array $data, object $pdo)
     {
-        $query = $pdo->prepare("SELECT id, password FROM user WHERE email = :email");
+        $query = $pdo->prepare("SELECT id, password, status FROM user WHERE email = :email");
         $query->execute(['email' => $data['email']]);
         return $query->fetch();
     }

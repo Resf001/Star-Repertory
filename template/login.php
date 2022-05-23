@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+use App\PDO\LogPDO;
 use App\verify\VerifyPost;
 
 $pageTitle = "Log In";
@@ -9,7 +12,7 @@ if (!empty($_POST)){
     if (empty($errors = VerifyPost::verifyLog($_POST, $pdo))){
         if($user = VerifyPost::userExist($_POST, $pdo)){
             if(VerifyPost::passwordVerify($_POST['password'], $user->password)){
-                // call LogPDO::setLog
+                LogPDO::logIn($user->id, $user->status);
             } else {
                 $errors['password'] = "Hmmm, no badly password";
             }
@@ -18,18 +21,24 @@ if (!empty($_POST)){
 }
 ?>
 <div class="sign">
-    <h1>Log In</h1>
-    <form action="" method="post" class="sign__form">
-        <div class="sign__element">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" value="<?=$_POST ? $_POST['email'] : '' ?>">
+    <?php if (empty($_SESSION['user'])): ?>
+        <h1>Log In</h1>
+        <form action="" method="post" class="sign__form">
+            <div class="sign__element">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" value="<?=$_POST ? $_POST['email'] : '' ?>">
+            </div>
+            <div class="sign__element">
+                <label for="password">PassWord</label>
+                <input type="password" name="password" id="password" value="<?=$_POST ? $_POST['password'] : '' ?>">
+            </div>
+            <input type="submit" name="submit" value="done" class="button primary">
+        </form>
+    <?php else: ?>
+        <div class="succes">
+            <p>You are already connect</p>
         </div>
-        <div class="sign__element">
-            <label for="password">PassWord</label>
-            <input type="password" name="password" id="password" value="<?=$_POST ? $_POST['password'] : '' ?>">
-        </div>
-        <input type="submit" name="submit" value="done" class="button primary">
-    </form>
+    <?php endif ?>
 </div>
 <div class="tips">
     <div class="tips__carousel">

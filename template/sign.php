@@ -1,5 +1,8 @@
-<?php 
+<?php
 
+session_start();
+
+use App\PDO\LogPDO;
 use App\PDO\SignPDO;
 
 $pageTitle = "Sign in";
@@ -17,14 +20,14 @@ if (!empty($_POST)){
             $errors["PDO"] = $e;
         }
         if(!$errors) {
-            $succes = true;
+            LogPDO::logIn($pdo->lastInsertId(), 1);
             unset($_POST);
         }
     }
 }
 ?>
 <div class="sign">
-<?php if (!$succes): ?>
+<?php if (empty($_SESSION['user'])): ?>
     <h1>Sign-In</h1>
     <form action="" method="post" class="sign__form">
         <div class="sign__element">
@@ -61,9 +64,9 @@ if (!empty($_POST)){
         <?php endforeach ?>
         </div>
     <?php endif ?>
-<?php elseif ($succes) :?>
+<?php else:?>
     <div class="succes">
-        <p>Nice, you are register. Thanks !!</p>
+        <p>Nice, you are register and log. Thanks !!</p>
     </div>
 <?php endif ?>
 </div>
