@@ -99,6 +99,17 @@ p {
   top: 1px;
   right: -45px;
 }
+.button.tiny {
+  font-size: 12px;
+  transition: 0.2s;
+}
+.button.tiny:hover::after {
+  display: none;
+}
+.button.tiny:hover {
+  padding: 11px 36px 11px 7px;
+  background-color: #cc6a0e;
+}
 
 .card {
   width: 250px;
@@ -449,6 +460,33 @@ body {
 .button__container {
   display: flex;
   gap: 0 30px;
+}
+
+.account {
+  position: fixed;
+  z-index: 9999;
+  float: right;
+  right: 15px;
+  top: 15px;
+  background: #000;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid grey;
+}
+.account .pseudo {
+  border-bottom: 2px solid grey;
+  cursor: pointer;
+}
+.account .infos {
+  display: none;
+}
+.account .infos.deployed {
+  display: block;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.account .infos p {
+  padding-bottom: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -20,7 +20,7 @@ if (!empty($_POST)){
             $errors["PDO"] = $e;
         }
         if(!$errors) {
-            LogPDO::logIn($pdo->lastInsertId(), 1);
+            LogPDO::logIn($pdo->lastInsertId(), 1, $_POST['name']);
             unset($_POST);
         }
     }

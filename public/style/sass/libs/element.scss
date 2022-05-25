@@ -57,6 +57,21 @@ p {
         top: 1px;
         right: -45px;
     }
+
+    &.tiny{
+        font-size: 12px;
+        transition: .2s;
+
+        &:hover::after{
+            display: none;
+        }
+
+        &:hover{
+            padding: 11px 36px 11px 7px;
+            background-color: #cc6a0e;
+        }
+
+    }
 }
 
 .card{

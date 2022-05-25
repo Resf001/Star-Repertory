@@ -12,7 +12,7 @@ if (!empty($_POST)){
     if (empty($errors = VerifyPost::verifyLog($_POST, $pdo))){
         if($user = VerifyPost::userExist($_POST, $pdo)){
             if(VerifyPost::passwordVerify($_POST['password'], $user->password)){
-                LogPDO::logIn($user->id, $user->status);
+                LogPDO::logIn($user->id, $user->status, $user->name);
             } else {
                 $errors['password'] = "Hmmm, no badly password";
             }
