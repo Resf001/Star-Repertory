@@ -8,6 +8,10 @@ use App\verify\VerifyPost;
 $pageTitle = "Log In";
 $pageDescrition = "Description";
 
+if (!empty($_POST['buttonLogOut'])){
+    unset($_SESSION['user'], $_POST['buttonLogOut']);
+}
+
 $errors = [];
 
 if (!empty($_POST)){
@@ -15,6 +19,7 @@ if (!empty($_POST)){
         if($user = VerifyPost::userExist($_POST, $pdo)){
             if(VerifyPost::passwordVerify($_POST['password'], $user->password)){
                 LogPDO::logIn($user->id, $user->status, $user->name);
+                unset($_POST);
             } else {
                 $errors['password'] = "Hmmm, no badly password";
             }

@@ -16,7 +16,9 @@
         </div>
         <div class="infos">
             <p>User id : <?= $_SESSION['user']['id'] ?></p>
-            <a href="" class="button primary tiny">Log Out</a>
+            <form action="" method="post">
+                <button class="button primary tiny" type="submit" name="buttonLogOut" value="logout">Log Out</button>
+            </form>
         </div>
     </div>
     <?php endif ?>

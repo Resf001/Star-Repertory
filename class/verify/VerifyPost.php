@@ -30,10 +30,10 @@ class VerifyPost {
     public static function verifyLog(array $data, object $pdo)
     {
         $errors = [];
-        if (!$data['password']){
+        if (  empty($data['password']) || !$data['password']){
             $errors['password'] = "Enter your password please";
         }
-        if (!$data['email']){
+        if (  empty($data['password']) || !$data['email']){
             $errors['email'] = "Enter your mail please";
         }
         return $errors;

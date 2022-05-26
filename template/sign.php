@@ -10,6 +10,11 @@ $pageDescrition = "Description";
 $log = false;
 $errors = null;
 $succes = false;
+
+if (!empty($_POST['buttonLogOut'])){
+    unset($_SESSION['user'], $_POST['buttonLogOut']);
+}
+
 if (!empty($_POST)){
     $signPut = new SignPDO($_POST, $pdo); 
     $errors = $signPut->verifyData();
