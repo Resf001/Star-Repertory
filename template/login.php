@@ -8,6 +8,8 @@ use App\verify\VerifyPost;
 $pageTitle = "Log In";
 $pageDescrition = "Description";
 
+$errors = [];
+
 if (!empty($_POST)){
     if (empty($errors = VerifyPost::verifyLog($_POST, $pdo))){
         if($user = VerifyPost::userExist($_POST, $pdo)){
@@ -16,7 +18,9 @@ if (!empty($_POST)){
             } else {
                 $errors['password'] = "Hmmm, no badly password";
             }
-        } 
+        } else {
+            $errors['email'] = "No, this mail doens't exist"; 
+        }
     }
 }
 ?>
@@ -34,6 +38,13 @@ if (!empty($_POST)){
             </div>
             <input type="submit" name="submit" value="done" class="button primary">
         </form>
+        <?php if ($errors): ?>
+            <div class="errors">
+            <?php foreach($errors as $key => $error): ?>
+                <p><?= $key ?> :  <?= $error ?></p>
+            <?php endforeach ?>
+            </div>
+        <?php endif ?>
     <?php else: ?>
         <div class="succes">
             <p>You are already connect</p>
