@@ -44,6 +44,16 @@ class ComposerStaticInit27915264944f001a84a66d4838547a02
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -59,6 +69,7 @@ class ComposerStaticInit27915264944f001a84a66d4838547a02
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit27915264944f001a84a66d4838547a02::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit27915264944f001a84a66d4838547a02::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit27915264944f001a84a66d4838547a02::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit27915264944f001a84a66d4838547a02::$classMap;
 
         }, null, ClassLoader::class);

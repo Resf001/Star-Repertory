@@ -347,7 +347,10 @@ p {
   background: #FFF;
   height: 100%;
   text-align: center;
-  height: 100vh;
+  height: 200vh;
+}
+.sign.full {
+  width: 100%;
 }
 .sign h1 {
   color: #000;
@@ -388,6 +391,12 @@ p {
   font-variation-settings: "GRAD" 22, "slnt" 0, "XTRA" 502, "XOPQ" 121, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
   font-size: 20px;
 }
+.sign .sign__form .sign__element textarea {
+  height: 500px;
+  width: 250px;
+  border: #000 solid 1px;
+  border-radius: 5px;
+}
 .sign .sign__form .button {
   margin-top: 25px;
 }
@@ -406,6 +415,13 @@ p {
   }
   .sign .sign__form .button {
     margin-bottom: 0;
+  }
+  .sign.full .sign__form textarea {
+    height: 1000px;
+    width: 1000px;
+  }
+  .sign.full .sign__form .sign__element label {
+    margin-left: 45%;
   }
 
   .tips {
